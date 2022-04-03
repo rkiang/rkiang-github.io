@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, Helvetica, sans-serifs;
+  font-weight: 100;
+  background: linear-gradient(-45deg, #464DDF, #D335BD, #FF478D, #FF8363, #FFC151,#F9F871);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.output {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 20px;
+}
+
+th {
+  text-align: left;
+  font-size: 26px;
+}
+
+thead th{
+    background-color: #55608f;
+    
+  }
+
+tbody tr
+    :hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+  
+  td 
+    :hover       :before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255,255,255,0.2);
+        z-index: -1;
+      }
+    
+  
+
+#ad{
+  position: absolute;
+  bottom: 150px; 
+  left: 50%;
+  margin-left: -200px;
+}
+
+#ad{
+  animation-name: silde_to_top;
+  animation-duration: 10s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-delay: 0;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes silde_to_top {
+  0% {
+      top: 100%;
+  }
+  100% {
+      top: 77%;
+      z-index: 1000000;
+  }
+}
+
+pre{
+  color:#ffff;
+  font-size: 30px;
+  padding-top: 7%;
+  padding-left: 24%;
+}
+
+#ws-logo{
+  width: 300px;
+  margin-bottom: -15px;
+}
+ 
+#weatherHeader{
+  margin:auto;
+  width: 65%;
+  padding-bottom: 20px;
+}
+
+#search{
+  margin:auto;
+  width: 15%;
+  margin-left:18%;
+}
+
+#units{
+  width:10%;
+  margin-left:5%;
+}
+
+#allOutputs{
+  margin-left: 8%;
+  padding-top: 8%;
+}
+
+#mapLogo{
+  width: 200px;
+  margin-bottom: -30px;
+}
+
+#mapBody{
+  margin-top: -2%;
+}
+
+
+/* Navbar */
+nav {
+  margin: 27px auto 0;
+
+  position: relative;
+  width: 300px;
+  height: 50px;
+  background-color: #34495e;
+  border-radius: 8px;
+  font-size: 0;
+}
+nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all .5s ease 0s;
+  border-radius: 8px;
+}
+a:nth-child(1) {
+  width: 100px;
+}
+a:nth-child(2) {
+  width: 100px;
+}
+a:nth-child(3) {
+  width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+  width: 100px;
+  left: 0;
+  background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+  width: 100px;
+  left: 100px;
+  background-color: #e74c3c;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+  width: 100px;
+  left: 200px;
+  background-color: #3498db;
+}
